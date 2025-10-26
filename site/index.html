@@ -9,30 +9,144 @@
   <meta property="og:description" content="Установка и изготовление мебели в Гомеле. Кухни — тоже. Позвоните: 8 029 844-68-37" />
   <meta name="color-scheme" content="light dark" />
   <style>
-    :root{--bg:#0b0c10;--card:#0f1117;--text:#e5e7eb;--muted:#a1a1aa;--accent:#22c55e;--border:#1f2330}
-    @media (prefers-color-scheme: light){:root{--bg:#f8fafc;--card:#ffffff;--text:#0f172a;--muted:#475569;--accent:#16a34a;--border:#e2e8f0}}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji";background:radial-gradient(1000px 700px at 100% -10%,rgba(34,197,94,.12),transparent),radial-gradient(900px 600px at -10% 110%,rgba(34,197,94,.08),transparent),var(--bg);color:var(--text);min-height:100svh;display:grid;place-items:center;padding:28px}
-    .card{width:min(860px,100%);background:linear-gradient(180deg,color-mix(in oklab,var(--card),black 4%),var(--card));border:1px solid var(--border);border-radius:24px;padding:clamp(22px,5vw,44px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    :root {
+      --bg:#0b0c10;
+      --card:#0f1117;
+      --text:#e5e7eb;
+      --muted:#a1a1aa;
+      --accent:#22c55e;
+      --border:#1f2330;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f8fafc;
+        --card:#ffffff;
+        --text:#0f172a;
+        --muted:#475569;
+        --accent:#16a34a;
+        --border:#e2e8f0;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background:
+        radial-gradient(1000px 700px at 100% -10%, rgba(34,197,94,.12), transparent),
+        radial-gradient(900px 600px at -10% 110%, rgba(34,197,94,.08), transparent),
+        var(--bg);
+      color: var(--text);
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+    }
+
+    .card {
+      width: min(860px, 100%);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--card), black 4%), var(--card));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: clamp(22px, 5vw, 44px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    }
 
     /* brand */
-    .brand{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:14px;border:1px solid var(--border);background:linear-gradient(135deg,rgba(34,197,94,.18),rgba(34,197,94,.05));display:grid;place-items:center}
-    .wordmark{margin:0;font-weight:900;letter-spacing:.4px;font-size:clamp(30px,6vw,44px)}
-    .tagline{margin-top:2px;color:var(--muted);font-size:clamp(14px,2.6vw,16px)}
-    .tagline b{color:var(--accent);font-weight:800}
+    .brand {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: clamp(14px, 3vw, 24px);
+      align-items: center;
+    }
 
-    .badges{margin:18px -6px 0;display:flex;flex-wrap:wrap;gap:12px}
-    .badge{border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-size:14px;color:var(--muted)}
+    .logo {
+      width: clamp(3rem, 8vw, 96px);
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(34,197,94,.18), rgba(34,197,94,.05));
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
 
-    .lead{margin:20px 0 6px;font-size:clamp(15px,2.8vw,18px);line-height:1.65}
-    .services{margin:10px 0 0;color:var(--muted)}
-    .extra{margin-top:18px;font-size:16px;line-height:1.5;color:var(--text)}
+    .wordmark {
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: .4px;
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1;
+    }
 
-    .phone{margin-top:22px;font-size:22px;font-weight:800;color:var(--accent)}
-    .cta{display:inline-block;margin-top:14px;padding:14px 18px;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:700}
+    .tagline {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: clamp(14px, 2.6vw, 16px);
+    }
 
-    footer{margin-top:26px;color:var(--muted);font-size:13px}
+    .tagline b {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .badges {
+      margin: 22px -6px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .lead {
+      margin: 24px 0 6px;
+      font-size: clamp(15px, 2.8vw, 18px);
+      line-height: 1.65;
+    }
+
+    .services {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .extra {
+      margin-top: 18px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .phone {
+      margin-top: 24px;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 14px 20px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
   </style>
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
@@ -66,6 +180,5 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
