@@ -34,20 +34,12 @@
 
     footer{margin-top:26px;color:var(--muted);font-size:13px}
   </style>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
   <main class="card" role="main">
     <header class="brand">
-      <!-- ЛОГО: встройка SVG + возможность заменить на свой файл logo.png -->
-      <div class="logo" aria-hidden="true">
-        <!-- Мини-иконка «шкаф/кухня»: геометричный знак -->
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3.5" y="3.5" width="17" height="17" rx="2.8"></rect>
-          <path d="M12 3.5v17M3.5 8.5h17"></path>
-          <circle cx="9" cy="6.8" r=".9" fill="currentColor"></circle>
-          <circle cx="15" cy="6.8" r=".9" fill="currentColor"></circle>
-        </svg>
-      </div>
+      <img src="/logo.png" alt="DFG" class="logo" style="object-fit:contain" />
       <div>
         <h1 class="wordmark">DFG</h1>
         <div class="tagline"><b>Д</b>изайн · <b>Ф</b>орма · <b>Г</b>армония</div>
@@ -75,10 +67,5 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
-  <!-- Заменить логотип картинкой:
-       1) добавьте в репозиторий файл logo.png (или logo.svg) в корень;
-       2) замените блок <div class="logo">…</div> на: 
-          <img src="/logo.png" alt="DFG" class="logo" style="object-fit:contain" />
-       Готово. -->
 </body>
 </html>
